@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta name="charset" content="UTF-8">
+    <meta name="description" content="Tip Calculator">
+    <meta name="author" content="Steven Mine">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  </head>
+  <body>
+
+    <div class="main-holder" id="mainHolder">
+
+      <div class="first-holder">
+
+        <div class="both-holder">
+          <div class="text">
+            Total Bill
+          </div>
+          <div class="input-container">
+            <span class="permanent-holder">$</span>
+            <input
+            type="number"
+            onkeyup="totalAmount()"
+            class="input"
+            id="billInput"
+            placeholder="0.00"
+            />
+          </div>
+        </div>
+  
+        <div class="both-holder">
+          <div class="text">
+            Tip
+          </div>
+          <div class="input-container">
+            <span class="permanent-holder">%</span>
+            <input
+            type="number"
+            onkeyup="totalAmount()"
+            class="input"
+            id="percentageInput"
+            placeholder="0"
+            />
+          </div>
+        </div>
+
+      </div>
+
+      <div class="second-holder">
+
+        <div class="bill-share-button" id="billShareButton">
+          Split the Bill?
+        </div>
+
+        <div class="button-people-holder" id="buttonPeopleHolder">
+          <div class="inline-holder">
+
+            <button class="inde-button" id="inButton" onclick="increasePeople()">
+              <span class="material-symbols-outlined">
+                add
+              </span>
+            </button>
+  
+            <div class="number-people" id="numberPeople"></div>
+            
+            <button class="inde-button" id="deButton" onclick="decreasePeople()">
+              <span class="material-symbols-outlined">
+                remove
+              </span>
+            </button>
+          </div>
+
+        </div>
+
+        <div class="result-holder">
+          <div class="result-text" id="resultText">
+          </div>
+          <div class="result" id="result">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="index.js"></script>
+
+  </body>
+
+</html>
